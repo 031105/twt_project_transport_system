@@ -1,0 +1,444 @@
+/* Enhanced Print Styles for Professional Booking Receipt */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #1f2937 !important;
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .receipt-container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 15mm !important;
+    box-shadow: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  /* Prevent page breaks */
+  .header,
+  .section,
+  .important-notice,
+  .route-visual {
+    page-break-inside: avoid !important;
+  }
+
+  .section {
+    break-inside: avoid !important;
+  }
+
+  /* Header styles */
+  .header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    border-bottom: 3px solid #2563eb !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    border-radius: 8px !important;
+  }
+
+  .company-logo {
+    font-size: 28pt !important;
+    font-weight: 800 !important;
+    color: #2563eb !important;
+    margin-bottom: 8px !important;
+  }
+
+  .receipt-title {
+    font-size: 24pt !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .receipt-subtitle {
+    font-size: 14pt !important;
+    color: #6b7280 !important;
+    font-weight: 500 !important;
+  }
+
+  .booking-reference {
+    background: #2563eb !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    font-size: 16pt !important;
+    font-weight: 700 !important;
+    margin-top: 15px !important;
+    display: inline-block !important;
+  }
+
+  /* Section styles */
+  .section {
+    margin-bottom: 20px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+
+  .section-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    padding: 12px 16px !important;
+    font-size: 16pt !important;
+    font-weight: 600 !important;
+  }
+
+  .section-content {
+    padding: 16px !important;
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-top: none !important;
+  }
+
+  /* Route visual */
+  .route-visual {
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  }
+
+  .route-cities {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 20px !important;
+  }
+
+  .city {
+    text-align: center !important;
+    flex: 1 !important;
+    padding: 0 10px !important;
+  }
+
+  .city-name {
+    font-size: 20pt !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .terminal-name {
+    font-size: 14pt !important;
+    color: #4b5563 !important;
+    font-weight: 600 !important;
+    margin-bottom: 3px !important;
+  }
+
+  .terminal-address {
+    font-size: 10pt !important;
+    color: #6b7280 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .departure-time {
+    font-size: 16pt !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+    background: #eff6ff !important;
+    padding: 6px 12px !important;
+    border-radius: 15px !important;
+    display: inline-block !important;
+  }
+
+  .route-arrow {
+    font-size: 28pt !important;
+    color: #2563eb !important;
+    font-weight: bold !important;
+    margin: 0 15px !important;
+  }
+
+  /* Total amount */
+  .total-amount {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    margin-top: 15px !important;
+  }
+
+  .amount-value {
+    font-size: 28pt !important;
+    font-weight: 800 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .amount-label {
+    font-size: 12pt !important;
+    opacity: 0.9 !important;
+  }
+
+  /* Information grid */
+  .info-grid {
+    display: block !important;
+  }
+
+  .info-grid > div {
+    display: block !important;
+    margin-bottom: 15px !important;
+  }
+
+  .info-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  .info-item:last-child {
+    border-bottom: none !important;
+  }
+
+  .info-label {
+    font-weight: 600 !important;
+    color: #4b5563 !important;
+    flex: 1 !important;
+  }
+
+  .info-value {
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: right !important;
+    flex: 1 !important;
+  }
+
+  /* Seats */
+  .seats-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin-top: 10px !important;
+  }
+
+  .seat-item {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: white !important;
+    padding: 6px 12px !important;
+    border-radius: 15px !important;
+    font-size: 12pt !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+  }
+
+  /* Status badges */
+  .status-badge {
+    background: #10b981 !important;
+    color: white !important;
+    padding: 4px 8px !important;
+    border-radius: 12px !important;
+    font-size: 12pt !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Important notice */
+  .important-notice {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%) !important;
+    border: 2px solid #f59e0b !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    margin: 20px 0 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .notice-title {
+    color: #92400e !important;
+    font-size: 16pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .notice-list {
+    list-style: none !important;
+    padding: 0 !important;
+  }
+
+  .notice-item {
+    color: #92400e !important;
+    margin-bottom: 8px !important;
+    padding-left: 16px !important;
+    position: relative !important;
+    font-weight: 500 !important;
+  }
+
+  .notice-item:before {
+    content: "⚠" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #f59e0b !important;
+    font-weight: bold !important;
+  }
+
+  /* QR Code */
+  .qr-placeholder {
+    width: 80px !important;
+    height: 80px !important;
+    background: #f3f4f6 !important;
+    border: 2px dashed #d1d5db !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 15px auto !important;
+    font-size: 10pt !important;
+    color: #6b7280 !important;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center !important;
+    margin-top: 30px !important;
+    padding-top: 20px !important;
+    border-top: 2px solid #e5e7eb !important;
+    color: #6b7280 !important;
+  }
+
+  .company-info {
+    font-weight: 600 !important;
+    color: #1f2937 !important;
+    margin-bottom: 8px !important;
+    font-size: 14pt !important;
+  }
+
+  .contact-info {
+    font-size: 12pt !important;
+    margin-bottom: 6px !important;
+  }
+
+  .generated-info {
+    font-size: 10pt !important;
+    color: #9ca3af !important;
+    margin-top: 12px !important;
+    font-style: italic !important;
+  }
+
+  /* Ensure proper spacing */
+  .mb-6 {
+    margin-bottom: 20px !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 15px !important;
+  }
+
+  .mb-3 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb-2 {
+    margin-bottom: 8px !important;
+  }
+
+  .p-6 {
+    padding: 15px !important;
+  }
+
+  .p-4 {
+    padding: 10px !important;
+  }
+
+  /* Text sizes for print */
+  .text-3xl {
+    font-size: 24pt !important;
+  }
+
+  .text-2xl {
+    font-size: 20pt !important;
+  }
+
+  .text-xl {
+    font-size: 16pt !important;
+  }
+
+  .text-lg {
+    font-size: 14pt !important;
+  }
+
+  .text-sm {
+    font-size: 10pt !important;
+  }
+
+  .text-xs {
+    font-size: 9pt !important;
+  }
+
+  /* Utility classes for colors */
+  .text-primary-600 {
+    color: #2563eb !important;
+  }
+
+  .bg-primary-600 {
+    background-color: #2563eb !important;
+    color: white !important;
+  }
+
+  .text-green-600 {
+    color: #10b981 !important;
+  }
+
+  .bg-green-600 {
+    background-color: #10b981 !important;
+    color: white !important;
+  }
+
+  .text-yellow-800 {
+    color: #92400e !important;
+  }
+
+  .bg-yellow-50 {
+    background-color: #fef3c7 !important;
+  }
+
+  .border-yellow-400 {
+    border-color: #f59e0b !important;
+  }
+
+  .text-gray-600 {
+    color: #6b7280 !important;
+  }
+
+  .text-gray-500 {
+    color: #9ca3af !important;
+  }
+
+  .bg-gray-50 {
+    background-color: #f9fafb !important;
+  }
+
+  .bg-blue-50 {
+    background-color: #eff6ff !important;
+  }
+
+  .bg-green-50 {
+    background-color: #f0fdf4 !important;
+  }
+
+  .border-primary-600 {
+    border-color: #2563eb !important;
+  }
+
+  .border-gray-200 {
+    border-color: #e5e7eb !important;
+  }
+} 
